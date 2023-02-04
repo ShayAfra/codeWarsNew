@@ -26,3 +26,17 @@ function mygcd(x,y){
     }
     return common
   }
+
+
+  //WITH RECURSION
+
+  function mygcd(x,y){
+    let max = Math.max(x, y)
+    let min = Math.min(x, y)
+    let remainder = max % min
+    if(remainder === 0){
+      return min
+    }
+  
+    return mygcd(min, remainder)
+  }
